@@ -34,8 +34,23 @@ Membase supports dify, swarms, weaviate and chroma.
 ```shell
 # use HUB_ENDPOINT(http://54.151.130.2:8080)
 > git clone -b membase https://github.com/unibaseio/swarms.git
+> cd swarms
 > pip install -e .
 ```
+
++ eliza
+
+```shell
+> git clone -b membase https://github.com/unibaseio/eliza.git
+> cd eliza
+# PUPPETEER_SKIP_DOWNLOAD=true pnpm install --no-frozen-lockfile
+> pnpm i
+> pnpm build
+# config env: llm api
+> cp .env.example .env
+> pnpm start --characters="path/to/your/character.json"
+```
+
 
 ### Vector Database
 
@@ -53,5 +68,6 @@ Membase supports dify, swarms, weaviate and chroma.
 ```shell
 #use HUB_ENDPOINT(http://54.151.130.2:8080)
 > git clone -b membase https://github.com/unibaseio/chroma.git
+> cd chroma
 > pip install -e .
 ```
